@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class SearchForm extends Component {
-    render() {
-        return (
-            <form>
-                <input type="text"></input>
-                <input type="submit"></input>
-            </form>
-        )
-    }
+export default function SearchForm(props) {
+    return (
+        <form>
+            <input type="text" name="searchInput" value={props.searchInput} onChange={props.handleInput}/>
+            <input type="submit"></input>
+        </form>
+    )
 }
+
+
