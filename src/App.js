@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import config from './config'
 import qs from 'qs';
 import SearchForm from './components/SearchForm';
+import Results from './components/Results'
 
 export default class App extends Component {
   state = {
     searchInput: '',
-    token: ''
+    token: '',
+    results: []
   }
 
 componentDidMount(){
-  let client_id = 'f6c9134639794e8d98e19edf97186b37';
-  let client_secret = 'e908f5b99ed842378f9c87d05cbe0d36';
+  
+  
   
   const headers = {
     headers: {
@@ -19,8 +22,8 @@ componentDidMount(){
        'Content-Type': 'application/x-www-form-urlencoded',
      },
      auth: {
-       username: client_id,
-       password: client_secret,
+       username: config.client_id,
+       password: config.client_secret,
      },
    };
    
@@ -56,7 +59,7 @@ handleSubmit = (e) => {
       
     }
   })
-  .then(response => console.log(response.data))
+  .then(response => this.setState({results:response.data}))
   .catch(err => {
     console.log(err);
 });
@@ -76,6 +79,7 @@ handleSubmit = (e) => {
       <div>
         <h1>Who Plays It???</h1>
         <SearchForm handleSubmit={this.handleSubmit} handleInput={this.handleInput} searchInput={this.state.searchInput}/>
+        <Results results={this.state.results}/>
       </div>
     )
   }
