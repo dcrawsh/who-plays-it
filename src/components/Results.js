@@ -1,9 +1,10 @@
 import React from 'react'
+import Song from './Song'
 
 export default function Results({ results }) {
     
     const addResults = () => {
-       return results.tracks.items.map(item => <li>{item.artists[0].name}</li>)
+       return results.tracks.items.map((item,index) => <Song key={index} info={item}/> )
     }
 
     if(results.length === 0){
