@@ -5,6 +5,7 @@ export default function SearchForm(props) {
         <form onSubmit={props.handleSubmit}>
             <input type="text" name="searchInput" value={props.searchInput} onChange={props.handleInput}/>
             <input type="submit"></input>
+            
         </form>
     )
 }

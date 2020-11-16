@@ -9,7 +9,8 @@ export default class App extends Component {
   state = {
     searchInput: '',
     token: '',
-    results: []
+    results: [],
+    callSearch: true
   }
 
 componentDidMount(){
@@ -34,7 +35,25 @@ componentDidMount(){
    
    // Make the request using the URL, query string, data, and headers.
    axios.post('https://accounts.spotify.com/api/token', qs.stringify(data), headers)
-   .then(res => this.setState({token: res.data.access_token}))
+   .then(res => {
+    const urlName = window.location.hash.slice(1)
+    if(urlName && urlName.length > 0){
+      axios.get(`https://api.spotify.com/v1/search?q=${urlName}&type=track&market=US`,
+    {
+      headers: {
+        'Authorization': 'Bearer ' + res.data.access_token,
+        
+      }
+    })
+    .then(response => this.setState({results:response.data}))
+    .catch(err => {
+      console.log(err);
+  });
+  
+    }
+    return this.setState({token: res.data.access_token})
+    
+    })
             .catch(err => {
                 console.log(err);
             });
@@ -51,6 +70,12 @@ handleInput = (e) => {
 handleSubmit = (e) => {
   
   let searchQuery = this.state.searchInput.split(/\W+/).join('%20')
+  
+  window.history.replaceState(null, null, `${document.location.pathname}#${this.state.searchInput}`)
+
+
+
+
   console.log(searchQuery)
   axios.get(`https://api.spotify.com/v1/search?q=${searchQuery}&type=track&market=US`,
   {
@@ -77,7 +102,7 @@ handleSubmit = (e) => {
   render() {
     return (
       <div>
-        <h1>Who Plays It???</h1>
+        <h1>Who Sang It???</h1>
         <SearchForm handleSubmit={this.handleSubmit} handleInput={this.handleInput} searchInput={this.state.searchInput}/>
         <Results results={this.state.results}/>
       </div>
