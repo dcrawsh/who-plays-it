@@ -4,6 +4,7 @@ import config from './config'
 import qs from 'qs';
 import SearchForm from './components/SearchForm';
 import Results from './components/Results'
+import { getLyrics, getSong } from 'genius-lyrics-api';
 
 export default class App extends Component {
   state = {
@@ -14,6 +15,15 @@ export default class App extends Component {
   }
 
 componentDidMount(){
+  const options = {
+    apiKey: 'QU_Xji1jsj5gzA-bei8fPddYKE1iqpMdeR1j2oHn6WUa9wnX1XhYsSAL-l_cd1W2',
+    title: 'Blinding Lights',
+    artist: 'The Weeknd',
+    optimizeQuery: true
+  };
+  
+  getLyrics(options).then((lyrics) => console.log(lyrics));
+
   
   
   

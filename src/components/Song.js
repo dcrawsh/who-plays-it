@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Artist( {info} ) {
     
-    console.log(info)
+   
     let wikiSearch = `https://en.wikipedia.org/wiki/${info.artists[0].name.replace(' ','_')}`
     return (
         
