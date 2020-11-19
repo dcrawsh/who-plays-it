@@ -7,13 +7,16 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.0",
+    "azlyrics-scraper": "^1.0.6",
+    "findthelyrics": "^1.0.7",
     "genius-lyrics-api": "^3.0.3",
     "lyrics-finder": "^21.4.0",
     "qs": "^6.9.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.0",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "website-scraper": "^4.2.3"
   },
   "scripts": {
     "start": "react-scripts start",

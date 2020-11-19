@@ -1,2 +1,1 @@
-declare module 'genius-lyrics-api';
-declare module 'lyrics-finder';
+declare module 'azlyrics-scraper';

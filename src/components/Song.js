@@ -1,4 +1,5 @@
 import React from 'react'
+import Lyrics from './Lyrics'
 
 export default function Artist( {info} ) {
     
@@ -16,6 +17,7 @@ export default function Artist( {info} ) {
             
                 <div className="song-info">{info.album.name} · {info.name} </div>
                 <div className="release-date">Release Date: {info.album.release_date}</div><br/>
+                <Lyrics artistName={info.artists[0].name} songName={info.name}/>
                 <hr></hr>
             </div>
         </div>
