@@ -5,6 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 800px;
+  margin: 0 auto;
+  background-image: url('./background.png');
+  
+}
+
+#root{
+  background-color: white;
 }
 
 code {
@@ -19,6 +27,8 @@ form{
 h1{
   margin-left: 10px;
   font-family: 'Rubik', sans-serif;
+  padding-top: 20px;
+  color: aqua;
 }
 
 .song-container {
@@ -98,6 +108,10 @@ input[type='submit'] {
 }
 input[type='submit']:hover {
   box-shadow: 0 0 40px 40px #e74c3c inset;
+}
+
+.lyric-container{
+  margin-top: 20px;
 }
 
 .lyric-container p{
