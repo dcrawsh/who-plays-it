@@ -8,7 +8,7 @@ export default function Results(props) {
     
     
     const addResults = () => {
-       return results.tracks.items.map((item,index) => <Song setLyrics={props.setLyrics} key={index} info={item}/> )
+       return results.tracks.items.map((item,index) => <Song currentLyrics={props.currentLyrics} setLyrics={props.setLyrics} key={index} info={item}/> )
     }
 
     if(results.length === 0){
