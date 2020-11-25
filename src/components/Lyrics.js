@@ -1,9 +1,10 @@
 import React from 'react'
 
 export default function Lyric(props) {
+
     return (
-        <div >
-            <p className="lyrics">{props.lyrics}</p>
+        <div dangerouslySetInnerHTML={{__html: props.lyrics}} className='danger-zone' >
+        
         </div>
     )
 }

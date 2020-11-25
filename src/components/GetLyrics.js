@@ -28,7 +28,7 @@ export default function GetLyrics(props) {
                 let verseArray = Array.from(paragraphs)
                 for(let i = 0; i < verseArray.length;i++){
                     console.log(verseArray[i].outerHTML)
-                    setLyrics(lyrics.concat(verseArray[i].outerHTML))
+                    props.setLyrics(verseArray[i].outerHTML)
                 }
                 
             })

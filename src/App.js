@@ -70,7 +70,7 @@ handleInput = (e) => {
 
 
 setLyrics = (response) => {
-  this.setState({lyrics: response })
+  this.setState({lyrics: this.state.lyrics.concat(response) })
 }
 
 
