@@ -4,7 +4,6 @@ import config from './config'
 import qs from 'qs';
 import SearchForm from './components/SearchForm';
 import Results from './components/Results'
-import Lyrics from './components/Lyrics'
 
 export default class App extends Component {
   state = {
@@ -117,8 +116,7 @@ handleSubmit = (e) => {
       <div>
         <h1>Who Sang It???</h1>
         <SearchForm handleSubmit={this.handleSubmit} handleInput={this.handleInput} searchInput={this.state.searchInput}/>
-        <Results results={this.state.results} setLyrics={this.setLyrics}/>
-        <Lyrics lyrics={this.state.lyrics}/>
+        <Results results={this.state.results}/>
       </div>
     )
   }
