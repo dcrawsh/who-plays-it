@@ -5,6 +5,7 @@ import qs from 'qs';
 import SearchForm from './components/SearchForm';
 import Results from './components/Results'
 
+
 export default class App extends Component {
   state = {
     searchInput: '',
@@ -116,6 +117,7 @@ handleSubmit = (e) => {
       <div>
         <h1>Who Sang It???</h1>
         <SearchForm handleSubmit={this.handleSubmit} handleInput={this.handleInput} searchInput={this.state.searchInput}/>
+        <div id="singing-img"><p>&nbsp;</p></div>
         <Results results={this.state.results}/>
       </div>
     )

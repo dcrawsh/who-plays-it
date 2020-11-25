@@ -33,7 +33,7 @@ export default function GetLyrics(props) {
     }
     return (
       <div>
-        <button onClick={handleClick}>{hasLyrics ? 'Hide Lyrics' : 'Show Lyrics'}</button>
+        <button className="lyrics-button" onClick={handleClick}>{hasLyrics ? 'Hide Lyrics' : 'Show Lyrics'}</button>
         <div className="lyric-container" id={`${artist}_${song}_lyrics`}></div>
       </div>
     );

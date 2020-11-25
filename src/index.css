@@ -13,6 +13,7 @@ body {
 
 #root{
   background-color: white;
+  box-shadow:5px 10px slategray;
 }
 
 code {
@@ -30,6 +31,8 @@ h1{
   padding-top: 20px;
   color: aqua;
 }
+
+
 
 .song-container {
   margin: 20px;
@@ -81,9 +84,9 @@ input[type='submit'] {
      -moz-appearance: none;
           appearance: none;
   background-color: transparent;
-  border: 2px solid #e74c3c;
+  border: 2px solid #008099;
   border-radius: 0.6em;
-  color: #5f27a8;
+  color: #008099;
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
@@ -99,6 +102,7 @@ input[type='submit'] {
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
+  outline: none;
   
 }
 
@@ -107,7 +111,8 @@ input[type='submit'] {
   transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }
 input[type='submit']:hover {
-  box-shadow: 0 0 40px 40px #e74c3c inset;
+  box-shadow: 0 0 40px 40px #008099 inset;
+  color: white;
 }
 
 .lyric-container{
@@ -117,3 +122,19 @@ input[type='submit']:hover {
 .lyric-container p{
   text-align: center;
 }
+
+.lyrics-button{
+  width: 75px;
+  height: 40px;
+  background-color: #008099;
+  border: 1px solid #008099;
+  color: white;
+  border-radius: .25rem;
+  outline: none;
+
+}
+  
+.lyrics-button:hover {
+  background-color: white;
+  color: #008099;
+  }
