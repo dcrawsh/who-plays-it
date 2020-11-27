@@ -3,7 +3,7 @@ export default function GetLyrics(props) {
     
     useEffect(()=> {
       document.getElementById(`${artist}_${song}_lyrics`).innerHTML = '';
-      document.getElementsByClassName('lyrics-button').innerText = 'Show Lyrics';
+      setHasLyrics(false)
 })
     
     
