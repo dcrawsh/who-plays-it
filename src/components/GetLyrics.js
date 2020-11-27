@@ -1,6 +1,10 @@
-import {React, useState } from 'react';
+import {React, useState, useEffect } from 'react';
 export default function GetLyrics(props) {
     
+    useEffect(()=> {
+      document.getElementById(`${artist}_${song}_lyrics`).innerHTML = '';
+      document.getElementsByClassName('lyrics-button').innerText = 'Show Lyrics';
+})
     
     
     const [hasLyrics, setHasLyrics] = useState('');

@@ -5,7 +5,7 @@ export default function Results(props) {
 
     const { results } = props;
 
-    
+
     
     const addResults = () => {
        return results.tracks.items.map((item,index) => <Song currentLyrics={props.currentLyrics} setLyrics={props.setLyrics} key={index} info={item}/> )
