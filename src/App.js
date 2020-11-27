@@ -18,6 +18,7 @@ export default class App extends Component {
 componentDidMount(){
   
   
+  
   const headers = {
     headers: {
        Accept: 'application/json',
@@ -100,6 +101,7 @@ handleSubmit = (e) => {
 });
   
   e.preventDefault()
+  this.setState({searchInput: ''})
   
 }
 
