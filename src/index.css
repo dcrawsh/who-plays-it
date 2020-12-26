@@ -38,13 +38,13 @@ code {
 }
 
 form{
-  margin-left: 10px;
+  margin-left: .8rem;
 }
 
 h1{
-  margin-left: 10px;
+  margin-left: .8rem;
   font-family: 'Rubik', sans-serif;
-  padding-top: 20px;
+  padding-top: 1.2rem;
   color: aqua;
 }
 
@@ -60,7 +60,7 @@ h1{
 
 
 .song-container {
-  margin: 20px;
+  margin: 1.2rem;
   display: flex;
   flex-flow: row nowrap;
 }
@@ -68,7 +68,7 @@ h1{
 .song-container-details{
   display: flex;
   flex-flow: column nowrap;
-  margin-left: 16px;
+  margin-left: 1rem;
 }
 
 .album-art img {
@@ -80,8 +80,8 @@ h1{
 .artist-name{
   font-size: 1.2em;
   font-weight: bold;
-  margin-top: 10px ;
-  margin-bottom: 5px ;
+  margin-top: .8rem ;
+  margin-bottom: .3rem ;
   text-decoration: none;
   color: black;
 }
@@ -96,7 +96,7 @@ h1{
 }
 
 .release-date{
-  margin-top: 5px;
+  margin-top: .3rem;
   margin-bottom: 5px;
   font-size: .75rem;
 }
