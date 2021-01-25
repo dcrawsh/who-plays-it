@@ -32,7 +32,8 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+  vertical-align: baseline;
+  box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -67,15 +68,21 @@ table {
   border-radius: 20px;
 } */
 
+/* #root{
+  margin: 0 auto !important;
+  width: 50%;
+} */
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-form{
+form {
   margin-left: 1rem;
-  margin-top: 2rem;
 }
+
+
 
 input{
   outline: none;
@@ -185,7 +192,8 @@ input[type='submit']:hover {
 
 input[placeholder]{
   font-size: 1.2rem;
-  border-radius: .5rem;
+  /* border-radius: .5rem; */
+  height: 52px;
 }
 
 .lyric-container{
@@ -221,5 +229,23 @@ p.verse {
 
 hr {
   display: none;
+}
+
+@media(min-width: 948px){
+  #root{
+    margin: 2rem auto !important;
+    width: 50%;
+    background-color: white;
+    box-shadow:5px 10px slategray;
+    border-radius: 20px;
+    padding: 2rem;
+  }
+  p.verse{
+    color: black;
+  }
+  form{
+    position: relative;
+    left: 5rem;
+  }
 }
 
