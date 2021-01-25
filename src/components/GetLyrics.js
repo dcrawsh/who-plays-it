@@ -11,10 +11,12 @@ export default function GetLyrics(props) {
     let artist = props.artistName.replaceAll(' ', '-').replaceAll('/','').toLowerCase();
     let song = props.songName.replaceAll(' ', '-').replaceAll('/','').toLowerCase();
     const handleClick = () => {
+      
       if (document.getElementById(`${artist}_${song}_lyrics`).innerHTML !== '') {
         document.getElementById(`${artist}_${song}_lyrics`).innerHTML = '';
         setHasLyrics(false);
       } else {
+        
         fetch(`https://my-cors-solution.herokuapp.com/https://www.metrolyrics.com/${song}-lyrics-${artist}.html`)
           .then(resp => resp.text())
           .then(text => {
