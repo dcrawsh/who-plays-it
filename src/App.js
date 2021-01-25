@@ -121,9 +121,9 @@ handleSubmit = (e) => {
   render() {
     return (
       <div>
-        <div id="logo-img"><p>&nbsp;</p></div>
+       
         <SearchForm handleSubmit={this.handleSubmit} handleInput={this.handleInput} searchInput={this.state.searchInput}/>
-        <div id="singing-img"><p>&nbsp;</p></div>
+       
         <Results results={this.state.results}/>
       </div>
     )
