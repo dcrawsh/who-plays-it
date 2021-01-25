@@ -149,6 +149,10 @@ h1{
   font-size: .75rem;
 }
 
+#root{
+  max-width: 666px;
+}
+
 
 
 input[type='submit'] {
