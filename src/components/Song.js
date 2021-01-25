@@ -15,7 +15,7 @@ export default function Song( props ) {
                 <div className="artist-name"><a href={wikiSearch}>{info.artists[0].name}</a></div>
                 <div className="song-info">{info.album.name} · {info.name} </div>
                 <div className="release-date">Release Date: {info.album.release_date}</div><br/>
-                <GetLyrics artistName={info.artists[0].name} songName={info.name}/>
+                <GetLyrics hasLyrics={false} artistName={info.artists[0].name} songName={info.name}/>
                 <hr></hr>
             </div>
         </div>

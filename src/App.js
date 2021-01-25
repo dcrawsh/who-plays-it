@@ -66,6 +66,8 @@ componentDidMount(){
 
 
 handleInput = (e) => {
+  const showBtns = document.querySelectorAll('.lyrics-button');
+  showBtns.forEach(button => button.innerHTML = 'Show Lyrics'); 
   this.setState({searchInput: e.target.value});
 }
 
@@ -79,6 +81,8 @@ setLyrics = (response) => {
 
 
 handleSubmit = (e) => {
+  
+  
   
   let searchQuery = this.state.searchInput.split(/\W+/).join('%20')
   
