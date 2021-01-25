@@ -121,6 +121,7 @@ handleSubmit = (e) => {
   render() {
     return (
       <div>
+        <h1>Who Sang It?</h1>
        
         <SearchForm handleSubmit={this.handleSubmit} handleInput={this.handleInput} searchInput={this.state.searchInput}/>
        

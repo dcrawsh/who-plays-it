@@ -62,6 +62,15 @@ table {
 	border-spacing: 0;
 }
 
+h1{
+  font-family: 'Niconne', cursive;
+  padding-top: 1.2rem;
+  font-size: 4rem;
+  color: black;
+  
+  margin-left: 1rem;
+}
+
 /* #root{
   background-color: white;
   box-shadow:5px 10px slategray;
@@ -89,12 +98,7 @@ input{
   
 }
 
-h1{
-  margin-left: .8rem;
-  font-family: 'Rubik', sans-serif;
-  padding-top: 1.2rem;
-  color: aqua;
-}
+
 
 /* #logo-img{
   background-image: url('./coollogo.png');
@@ -250,6 +254,15 @@ hr {
   form{
     position: relative;
     left: 5rem;
+  }
+  h1{
+    margin: 0 auto !important;
+    font-family: 'Niconne', cursive;
+    padding-top: 1.2rem;
+    font-size: 4rem;
+    color: black;
+    position: relative;
+    left: 4.5rem;
   }
 }
 
