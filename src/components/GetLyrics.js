@@ -16,7 +16,7 @@ export default function GetLyrics(props) {
         document.getElementById(`${artist}_${song}_lyrics`).innerHTML = '';
         setHasLyrics(false);
       } else {
-        
+        document.getElementById(`${artist}_${song}_lyrics`).innerHTML = 'SEARCHING...';
         fetch(`https://my-cors-solution.herokuapp.com/https://www.metrolyrics.com/${song}-lyrics-${artist}.html`)
           .then(resp => resp.text())
           .then(text => {
