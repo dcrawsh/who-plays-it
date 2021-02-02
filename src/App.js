@@ -91,7 +91,6 @@ handleSubmit = (e) => {
 
 
 
-  console.log(searchQuery)
   axios.get(`https://api.spotify.com/v1/search?q=${searchQuery}&type=track&market=US`,
   {
     headers: {

@@ -30,7 +30,6 @@ export default function GetLyrics(props) {
                 document.getElementById(`${artist}_${song}_lyrics`).innerHTML = '';
               }
               for (let i = 0; i < verseArray.length;i++){
-                console.log(verseArray[i].outerHTML)
                 document.getElementById(`${artist}_${song}_lyrics`).innerHTML += verseArray[i].outerHTML;
               }
           });

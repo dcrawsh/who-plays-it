@@ -10,7 +10,6 @@
     var parser = new DOMParser();
     var doc = parser.parseFromString(sourceText, "text/html");
     var paragraphs = doc.querySelectorAll('p');
-    console.log(paragraphs)
     }
     
  
